@@ -1,0 +1,27 @@
+{
+  "name": "@sampsonjs/helpers",
+  "version": "1.0.0-alpha.0",
+  "description": "",
+  "main": "index.js",
+  "files": [ "**/*" ],
+  "scripts": {
+    "build": "BASE_FOLDER=helpers yarn --cwd ../ build",
+    "test": "test"
+  },
+  "dependencies": {
+    "core-js": "^3.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/SampsonCrowley/sampsonjs.git"
+  },
+  "keywords": [
+    "helpers"
+  ],
+  "author": "Sampson Crowley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SampsonCrowley/sampsonjs/issues"
+  },
+  "homepage": "https://github.com/SampsonCrowley/sampsonjs/helpers#readme"
+}

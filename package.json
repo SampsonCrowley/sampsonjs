@@ -1,0 +1,25 @@
+{
+  "name": "SampsonJS",
+  "version": "1.0.0-alpha.0",
+  "description": "Commonly used JavaScript components and functions",
+  "repository": "https://github.com/SampsonCrowley/sampsonjs",
+  "author": "Sampson Crowley",
+  "license": "ISC",
+  "scripts": {
+    "build": "bin/build",
+    "build:all": "yarn build:helpers & yarn build:stimulated",
+    "build:helpers": "bin/build helpers",
+    "build:stimulated": "bin/build stimulated"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-destructuring": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-plugin-macros": "^3.0.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "core-js": "^3.4.0"
+  }
+}

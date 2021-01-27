@@ -1,0 +1,6 @@
+{
+  "name": "VideoController",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./video-controller.js"
+}

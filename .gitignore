@@ -1,0 +1,10 @@
+**/.env
+**/dist
+**/node_modules
+**/.eslintcache
+**/tmp
+**/log
+**/*.log
+**/storage
+**/*.key
+!**/.keep
