@@ -1,12 +1,16 @@
 {
   "name": "@sampsonjs/stimulated",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.1",
   "description": "",
   "main": "index.js",
   "files": [ "**/*" ],
+  "scripts": {
+    "build": "yarn --cwd ../ build stimulated",
+    "test": "test"
+  },
   "dependencies": {
     "@rails/activestorage": "^6.0.0",
-    "@sampsonjs/helpers": "1.0.0-alpha.0",
+    "@sampsonjs/helpers": "1.0.0-alpha.2",
     "date-fns": "^2.16.1",
     "date-fns-tz": "^1.0.12",
     "date-time-format-timezone": "^1.0.22",
@@ -14,10 +18,6 @@
     "material-components-web": "^9.0.0",
     "stimulus": "^1.1.1",
     "stimulus_reflex": "^3.1.3"
-  },
-  "scripts": {
-    "build": "BASE_FOLDER=stimulated yarn --cwd ../ build",
-    "test": "test"
   },
   "repository": {
     "type": "git",

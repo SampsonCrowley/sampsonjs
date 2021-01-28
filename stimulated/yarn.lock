@@ -630,10 +630,10 @@
   dependencies:
     spark-md5 "^3.0.0"
 
-"@sampsonjs/helpers@1.0.0-alpha.0":
-  version "1.0.0-alpha.0"
-  resolved "https://registry.yarnpkg.com/@sampsonjs/helpers/-/helpers-1.0.0-alpha.0.tgz#5b15b5c956bb268ff7da949944470bf5cc5a2d5c"
-  integrity sha512-iwPOluWV1hXHTVO4TkZA4oWrpDAKWeQGoKxQz3oAR60s9y+1ymOXLlWuke+f4a/bxgIxiyhIh+WIIn1XaJgLjA==
+"@sampsonjs/helpers@1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@sampsonjs/helpers/-/helpers-1.0.0-alpha.2.tgz#592c9b2223c1793fe4d129c690ad31e401142aba"
+  integrity sha512-qhY8BtAeYL/EhoWEYEYjfIxhNThNXwHd4AqvYvHecjcGIop6arwi+aJ876L2JqoqkY2XSNHBM7ebHIjFdyIWqQ==
   dependencies:
     core-js "^3.4.0"
 

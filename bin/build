@@ -5,5 +5,5 @@ bin_path=$(dirname $script_path)
 root_path=$(dirname $bin_path)
 pkg_path="$root_path/$1"
 
-npx babel "$pkg_path/src" --out-dir "$pkg_path/dist"
+npx babel "$pkg_path/src" --out-dir "$pkg_path/dist" --copy-files
 cp "$1/package.json" "$1/dist/"

@@ -1,27 +1,29 @@
 {
-  "name": "@sampsonjs/helpers",
+  "name": "@sampsonjs/material",
   "version": "1.0.0-alpha.2",
   "description": "",
   "main": "index.js",
   "files": [ "**/*" ],
   "scripts": {
-    "build": "yarn --cwd ../ build helpers",
+    "build": "yarn --cwd ../ build material",
     "test": "test"
   },
   "dependencies": {
-    "core-js": "^3.4.0"
+    "material-components-web": "^9.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com/SampsonCrowley/sampsonjs.git"
   },
   "keywords": [
-    "helpers"
+    "common",
+    "js",
+    "tasks"
   ],
   "author": "Sampson Crowley",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SampsonCrowley/sampsonjs/issues"
   },
-  "homepage": "https://github.com/SampsonCrowley/sampsonjs/helpers#readme"
+  "homepage": "https://github.com/SampsonCrowley/sampsonjs/material#readme"
 }

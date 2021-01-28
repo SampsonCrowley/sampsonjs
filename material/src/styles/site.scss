@@ -1,0 +1,51 @@
+// Material Theming
+@use "./variables" as material-theme;
+
+// @use "@material/theme/variables" as theme-variables with (
+@use "@material/theme" with (
+  $primary: material-theme.$primary,
+  // $on-primary: material-theme.$on-primary,
+  $secondary: material-theme.$secondary,
+  // $on-secondary: material-theme.$on-secondary,
+  $error: material-theme.$error,
+  $on-error: material-theme.$on-error
+);
+
+// @use "@material/typography/variables" as typography-variables with (
+@use "@material/typography" with (
+  $styles-headline1: (
+    font-family: material-theme.$header-font-family
+  ),
+  $styles-headline2: (
+    font-family: material-theme.$header-font-family
+  ),
+  $styles-headline3: (
+    font-family: material-theme.$header-font-family
+  ),
+  $styles-headline4: (
+    font-family: material-theme.$header-font-family
+  ),
+  $styles-headline5: (
+    font-family: material-theme.$header-font-family
+  ),
+  $styles-headline6: (
+    font-family: material-theme.$header-font-family
+  ),
+  $font-family: material-theme.$font-family
+);
+
+@use "@material/layout-grid" with (
+  $breakpoints: material-theme.$breakpoints,
+  $columns: material-theme.$columns,
+  $default-margin: material-theme.$default-margin,
+  $default-gutter: material-theme.$default-gutter,
+  $column-width: material-theme.$column-width
+);
+
+// Import framework components
+@use "material/styles/framework";
+
+// Import site-specific CSS files
+@use "material/styles/components";
+@use "material/styles/offsets";
+@use "material/styles/other";
