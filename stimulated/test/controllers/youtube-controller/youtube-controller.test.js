@@ -1,6 +1,6 @@
-// stimuli/controllers/youtube-controller/youtube-controller.js
+// controllers/youtube-controller/youtube-controller.js
 import { MDCTopAppBar } from '@material/top-app-bar';
-import { YoutubeController, youtubeLoaded } from "stimuli/controllers/youtube-controller"
+import { YoutubeController, youtubeLoaded } from "controllers/youtube-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
 import { visibility } from "@sampsonjs/helpers/visibility-state"
 import {
@@ -18,13 +18,13 @@ import {
           unregisterController
                                       } from "./_constants"
 
-jest.mock("helpers/import-script")
-jest.mock("helpers/unique-id")
+jest.mock("@sampsonjs/helpers/import-script")
+jest.mock("@sampsonjs/helpers/unique-id")
 
 uniqueId.mockImplementation(uniqueIdImplementation)
 importScript.mockImplementation(importScriptImplementation)
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("YoutubeController", () => {
       beforeEach(Player.clearMocks)

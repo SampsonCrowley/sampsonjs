@@ -1,6 +1,6 @@
 @use "sass:map";
 @use "./variables" as material-theme;
-@use "components/grid/mixins" as grid-mixins;
+@use "./components/grid/mixins" as grid-mixins;
 
 *, ::after, ::before {
   box-sizing: border-box;
@@ -24,6 +24,11 @@ body {
   .bg-error {
     background: material-theme.$error;
     color: material-theme.$on-error;
+  }
+
+  .bg-white {
+    background: material-theme.$white;
+    color: material-theme.$black;
   }
 
   .bg-form-field {

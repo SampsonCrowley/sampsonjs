@@ -1,11 +1,11 @@
-// stimuli/controllers/dropzone-controller/upload-manager.js
-import { UploadManager } from "stimuli/controllers/dropzone-controller/upload-manager"
+// controllers/dropzone-controller/upload-manager.js
+import { UploadManager } from "controllers/dropzone-controller/upload-manager"
 import { DirectUpload } from "@rails/activestorage"
 import { removeElement } from "@sampsonjs/helpers/remove-element"
 import { insertAfter } from "@sampsonjs/helpers/insert-after"
 
-jest.mock("helpers/remove-element")
-jest.mock("helpers/insert-after")
+jest.mock("@sampsonjs/helpers/remove-element")
+jest.mock("@sampsonjs/helpers/insert-after")
 
 const createUploadMock = jest.fn().mockImplementation((cb) => {
   cb(null, { signed_id: 'signedId' })
@@ -17,7 +17,7 @@ const createUploadMockWithError = jest.fn().mockImplementation((cb) => {
 
 const originalCreate = DirectUpload.prototype.create
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("DropzoneController", () => {
       describe("helpers", () => {
@@ -38,7 +38,7 @@ describe("Stimuli", () => {
             })
           })
 
-          test.todo("write tests for stimuli/controllers/dropzone-controller/upload-manager.js")
+          test.todo("write tests for controllers/dropzone-controller/upload-manager.js")
 
           describe("constructor", () => {
             it("attaches a new DirectUpload using the given controller[url], file, and [this]", () => {

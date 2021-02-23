@@ -1,17 +1,17 @@
-import { DropzoneController } from "stimuli/controllers/dropzone-controller"
-import { UploadManager } from "stimuli/controllers/dropzone-controller/upload-manager"
+import { DropzoneController } from "controllers/dropzone-controller"
+import { UploadManager } from "controllers/dropzone-controller/upload-manager"
 import { default as Dropzone } from "dropzone"
 import { getMetaValue } from "@sampsonjs/helpers/get-meta-value"
 import { findElement } from "@sampsonjs/helpers/find-element"
 import { removeElement } from "@sampsonjs/helpers/remove-element"
-import { controllerRegistration } from "test-helpers/generators/stimulus/controller-registration"
-import { TemplateController } from "test-helpers/generators/stimulus/template-controller"
+import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
+import { TemplateController } from "../../test-helpers/generators/template-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
 
 DropzoneController.bless()
 
-const { findElement: findElementImplementation } = jest.requireActual("helpers/find-element")
-const { removeElement: removeElementImplementation } = jest.requireActual("helpers/remove-element")
+const { findElement: findElementImplementation } = jest.requireActual("@sampsonjs/helpers/find-element")
+const { removeElement: removeElementImplementation } = jest.requireActual("@sampsonjs/helpers/remove-element")
 
 const getMetaValueImplementation = v => `Meta Value: ${v}`
 

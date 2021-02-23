@@ -1,4 +1,4 @@
-import { Scope } from "test-helpers/mocks/stimulus/scope"
+import { Scope } from "../mocks/stimulus/scope"
 
 export const mockScope = (controller, element) => {
   const scope = new Scope(controller.constructor.keyName, element)

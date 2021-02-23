@@ -22,7 +22,7 @@
 @use "sass:map";
 @use "sass:string";
 @use "./variables" as material-theme;
-@use "material/styles/components/grid/mixins";
+@use "./components/grid/mixins";
 
 $direction-types: top, bottom, left, right;
 $display-types: block, flex, none;

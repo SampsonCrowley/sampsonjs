@@ -7,4 +7,5 @@
 **/*.log
 **/storage
 **/*.key
+**/coverage
 !**/.keep

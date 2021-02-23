@@ -1,5 +1,5 @@
-import { ListController } from "stimuli/controllers/list-controller"
-import { controllerRegistration } from "test-helpers/generators/stimulus/controller-registration"
+import { ListController } from "controllers/list-controller"
+import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 
 ListController.bless()
 

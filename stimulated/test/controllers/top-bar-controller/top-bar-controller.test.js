@@ -1,6 +1,6 @@
-// stimuli/controllers/top-bar-controller/top-bar-controller.js
+// controllers/top-bar-controller/top-bar-controller.js
 import { MDCTopAppBar } from '@material/top-app-bar';
-import { TopBarController } from "stimuli/controllers/top-bar-controller"
+import { TopBarController } from "controllers/top-bar-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
 import {
           getElements,
@@ -9,7 +9,7 @@ import {
           unregisterController
                                 } from "./_constants"
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("TopBarController", () => {
       it("has keyName 'top-bar'", () => {

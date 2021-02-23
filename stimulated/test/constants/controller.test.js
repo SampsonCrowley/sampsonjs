@@ -1,14 +1,14 @@
 // stimuli/constants/controller.js
-import { Application } from "stimuli/constants/application"
-import { Controller } from "stimuli/constants/controller"
-import { Scope } from "test-helpers/mocks/stimulus/scope"
+import { Application } from "application"
+import { Controller } from "controller"
+import { Scope } from "../test-helpers/mocks/stimulus/scope"
 
-jest.mock("stimuli/constants/application", () => ({ Application: { register: jest.fn(), unload: jest.fn() } }))
+jest.mock("application", () => ({ Application: { register: jest.fn(), unload: jest.fn() } }))
 
 const testKeys = []
 for(let i = 0; i < 10; i++) testKeys.push(`test-key-${Math.random()}`.replace(/\./g, ""))
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Constants", () => {
     describe("Controller", () => {
       test.todo("write tests for stimuli/constants/controller.js")

@@ -1,25 +1,25 @@
-import { AppDrawerController   } from "stimuli/controllers/app-drawer-controller"
-import { CheckboxController    } from "stimuli/controllers/checkbox-controller"
-import { ClipboardController   } from "stimuli/controllers/clipboard-controller"
-import { DropzoneController    } from "stimuli/controllers/dropzone-controller"
-import { DynamicLinkController } from "stimuli/controllers/dynamic-link-controller"
-import { ListController        } from "stimuli/controllers/list-controller"
-import { SelectMenuController  } from "stimuli/controllers/select-menu-controller"
-import { TextFieldController   } from "stimuli/controllers/text-field-controller"
-import { TimeSyncController    } from "stimuli/controllers/time-sync-controller"
-import { TopBarController      } from "stimuli/controllers/top-bar-controller"
-import { YoutubeController     } from "stimuli/controllers/youtube-controller"
+import { AppDrawerController   } from "controllers/app-drawer-controller"
+import { CheckboxController    } from "controllers/checkbox-controller"
+import { ClipboardController   } from "controllers/clipboard-controller"
+import { DropzoneController    } from "controllers/dropzone-controller"
+import { DynamicLinkController } from "controllers/dynamic-link-controller"
+import { ListController        } from "controllers/list-controller"
+import { SelectMenuController  } from "controllers/select-menu-controller"
+import { TextFieldController   } from "controllers/text-field-controller"
+import { TimeSyncController    } from "controllers/time-sync-controller"
+import { TopBarController      } from "controllers/top-bar-controller"
+import { YoutubeController     } from "controllers/youtube-controller"
 
-import * as IndexModule from "stimuli/controllers"
-import { Controller } from "stimuli/constants/controller"
+import * as IndexModule from "controllers"
+import { Controller } from "controller"
 import { readdirSync } from "fs"
-import { srcRoot } from "test-helpers/file-roots"
+import { srcRoot } from "../test-helpers/file-roots"
 import path from "path"
 
-const controllerPath = path.resolve(srcRoot, "stimuli/controllers"),
+const controllerPath = path.resolve(srcRoot, "controllers"),
       constantize = v => v.replace(/^([a-z])|-([a-z])/gi, v => v.toUpperCase().replace("-", ""))
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("index", () => {
       it("exports all Stimuli Controllers", () => {

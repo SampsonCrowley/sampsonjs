@@ -1,6 +1,6 @@
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
-import { Schema } from "test-helpers/mocks/stimulus/schema"
-import { attributeContainsToken } from "test-helpers/attribute-contains-token"
+import { Schema } from "../mocks/stimulus/schema"
+import { attributeContainsToken } from "../attribute-contains-token"
 
 const removeController = (controller) => {
   return async () => {

@@ -1,9 +1,10 @@
-// stimuli/controllers/select-menu-controller/select-menu-controller.js
+// controllers/select-menu-controller/select-menu-controller.js
 import { MDCSelect } from "@material/select";
-import { SelectMenuController } from "stimuli/controllers/select-menu-controller"
+import { SelectMenuController } from "controllers/select-menu-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
 import {
           createTemplateController,
+          getDupedElements,
           getElements,
           mockScope,
           registerController,
@@ -11,7 +12,7 @@ import {
           unregisterController
                                       } from "./_constants"
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("SelectMenuController", () => {
 
@@ -19,9 +20,16 @@ describe("Stimuli", () => {
         expect(SelectMenuController.keyName).toEqual("select-menu")
       })
 
-      it("has targets for select, label, and icon", () => {
+      it("has targets for select, anchor, menu, item, input, and text", () => {
         expect(SelectMenuController.targets)
-          .toEqual([ "select", "item", "input", "text" ])
+          .toEqual([
+            "select",
+            "anchor",
+            "menu",
+            "item",
+            "input",
+            "text"
+          ])
       })
 
       describe("lifecycles", () => {
@@ -37,7 +45,7 @@ describe("Stimuli", () => {
           })
 
           it("sets [selectMenu] to an MDCSelect of element", () => {
-            const { select, input, label, text } = getElements(),
+            const { select, anchor, menu, input, items, label, text, count } = getElements(),
                   controller = select["controllers"]["select-menu"]
 
             expect(controller.selectMenu).toBeInstanceOf(MDCSelect)
@@ -45,6 +53,8 @@ describe("Stimuli", () => {
             expect(controller.selectMenu.hiddenInput).toBe(input)
             expect(controller.selectMenu.selectedText).toBe(text)
             expect(controller.selectMenu.label.root).toBe(label)
+            expect(controller.anchorTarget).toBe(anchor)
+            expect(controller.menuTarget).toBe(menu)
           })
         })
 
@@ -278,8 +288,6 @@ describe("Stimuli", () => {
             controller.selectMenu = select
             const invalid = controller.itemTargets.length
 
-            console.debug(`itemTargets: ${invalid}`)
-
             controller.selectMenu.selectedIndex = 1
             expect(controller.selectedIndex).toEqual(1)
             controller.selectMenu.selectedIndex = invalid
@@ -297,10 +305,13 @@ describe("Stimuli", () => {
             expect(controller.selectMenu).toBe(undefined)
           })
 
-          it("requires an label child with the proper class", () => {
+          it("requires an anchored label and text child with the proper class and a menu around the items", () => {
             const controller = new SelectMenuController(),
-                  div = document.createElement("div"),
-                  { input, items, label, text } = getElements()
+                  div = document.createElement("div")
+
+            let anchor, menu, input, items, label, text
+
+            Object.defineProperty(controller, "itemTargets", { get: () => items || [] } )
 
             expect(() => controller.selectMenu = null).toThrow(TypeError)
             expect(() => controller.selectMenu = null).toThrow(new TypeError("Cannot read property 'querySelector' of null"))
@@ -308,14 +319,45 @@ describe("Stimuli", () => {
             expect(() => controller.selectMenu = div).toThrow(Error)
             expect(() => controller.selectMenu = div).toThrow(new Error("MDCSelect: Missing required element: The following selector must be present: '.mdc-select__selected-text'"))
 
+            text = getDupedElements().text
+
             div.appendChild(text)
 
             expect(() => controller.selectMenu = div).toThrow(TypeError)
             expect(() => controller.selectMenu = div).toThrow(new TypeError("Cannot read property 'hasAttribute' of null"))
 
-            items.forEach(i => div.appendChild(i))
+
+            div.innerHTML = ""
+            anchor = getDupedElements().anchor
+            menu = getDupedElements().menu
+
+            div.appendChild(anchor)
+            div.appendChild(menu)
 
             expect(() => controller.selectMenu = div).not.toThrow()
+
+            div.innerHTML = ""
+            label = getDupedElements().label
+            text = getDupedElements().text
+            menu = getDupedElements().menu
+
+            div.appendChild(label)
+            div.appendChild(text)
+            div.appendChild(menu)
+
+            expect(() => controller.selectMenu = div).toThrow(TypeError)
+            expect(() => controller.selectMenu = div).toThrow(new TypeError("Cannot read property 'hasAttribute' of null"))
+
+            div.innerHTML = ""
+            anchor = getDupedElements().anchor
+            items = getDupedElements().items
+
+            div.appendChild(anchor)
+
+            items.forEach(i => div.appendChild(i))
+
+            expect(() => controller.selectMenu = div).toThrow(TypeError)
+            expect(() => controller.selectMenu = div).toThrow(new TypeError("Cannot read property 'classList' of null"))
           })
 
           it("creates an MDCSelect of the given element", async () =>{

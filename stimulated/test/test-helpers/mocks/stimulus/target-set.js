@@ -1,4 +1,4 @@
-import { attributeContainsToken } from "test-helpers/attribute-contains-token"
+import { attributeContainsToken } from "../../attribute-contains-token"
 
 export class TargetSet {
   constructor(scope) {

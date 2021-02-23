@@ -1,8 +1,8 @@
-// stimuli/controllers/list-controller/list-controller.js
+// controllers/list-controller/list-controller.js
 import { MDCList } from "@material/list";
 import { MDCRipple } from '@material/ripple';
-import { ListController } from "stimuli/controllers/list-controller"
-import { removeControllers } from "test-helpers/remove-controllers"
+import { ListController } from "controllers/list-controller"
+import { removeControllers } from "../../test-helpers/remove-controllers"
 import {
           getElements,
           registerController,
@@ -10,7 +10,7 @@ import {
                                 } from "./_constants"
 
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("ListController", () => {
       it("has keyName 'list'", () => {

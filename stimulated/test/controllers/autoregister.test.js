@@ -1,26 +1,26 @@
-import { AppDrawerController   } from "stimuli/controllers/app-drawer-controller"
-import { CheckboxController    } from "stimuli/controllers/checkbox-controller"
-import { ClipboardController   } from "stimuli/controllers/clipboard-controller"
-import { DropzoneController    } from "stimuli/controllers/dropzone-controller"
-import { DynamicLinkController } from "stimuli/controllers/dynamic-link-controller"
-import { ListController        } from "stimuli/controllers/list-controller"
-import { TextFieldController   } from "stimuli/controllers/text-field-controller"
-import { TimeSyncController    } from "stimuli/controllers/time-sync-controller"
-import { TopBarController      } from "stimuli/controllers/top-bar-controller"
-import { YoutubeController     } from "stimuli/controllers/youtube-controller"
+import { AppDrawerController   } from "controllers/app-drawer-controller"
+import { CheckboxController    } from "controllers/checkbox-controller"
+import { ClipboardController   } from "controllers/clipboard-controller"
+import { DropzoneController    } from "controllers/dropzone-controller"
+import { DynamicLinkController } from "controllers/dynamic-link-controller"
+import { ListController        } from "controllers/list-controller"
+import { TextFieldController   } from "controllers/text-field-controller"
+import { TimeSyncController    } from "controllers/time-sync-controller"
+import { TopBarController      } from "controllers/top-bar-controller"
+import { YoutubeController     } from "controllers/youtube-controller"
 
-jest.mock("stimuli/controllers/app-drawer-controller",   () => ({ AppDrawerController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/checkbox-controller",     () => ({ CheckboxController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/clipboard-controller",    () => ({ ClipboardController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/dropzone-controller",     () => ({ DropzoneController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/dynamic-link-controller", () => ({ DynamicLinkController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/list-controller",         () => ({ ListController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/text-field-controller",   () => ({ TextFieldController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/time-sync-controller",    () => ({ TimeSyncController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/top-bar-controller",      () => ({ TopBarController: { load: jest.fn() } }))
-jest.mock("stimuli/controllers/youtube-controller",      () => ({ YoutubeController: { load: jest.fn() } }))
+jest.mock("controllers/app-drawer-controller",   () => ({ AppDrawerController: { load: jest.fn() } }))
+jest.mock("controllers/checkbox-controller",     () => ({ CheckboxController: { load: jest.fn() } }))
+jest.mock("controllers/clipboard-controller",    () => ({ ClipboardController: { load: jest.fn() } }))
+jest.mock("controllers/dropzone-controller",     () => ({ DropzoneController: { load: jest.fn() } }))
+jest.mock("controllers/dynamic-link-controller", () => ({ DynamicLinkController: { load: jest.fn() } }))
+jest.mock("controllers/list-controller",         () => ({ ListController: { load: jest.fn() } }))
+jest.mock("controllers/text-field-controller",   () => ({ TextFieldController: { load: jest.fn() } }))
+jest.mock("controllers/time-sync-controller",    () => ({ TimeSyncController: { load: jest.fn() } }))
+jest.mock("controllers/top-bar-controller",      () => ({ TopBarController: { load: jest.fn() } }))
+jest.mock("controllers/youtube-controller",      () => ({ YoutubeController: { load: jest.fn() } }))
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("autoregister", () => {
       it("loads default controllers on first eval", async () => {
@@ -35,7 +35,7 @@ describe("Stimuli", () => {
         expect(TopBarController.load).not.toHaveBeenCalled()
         expect(YoutubeController.load).not.toHaveBeenCalled()
 
-        await import("stimuli/controllers/autoregister")
+        await import("controllers/autoregister")
 
         expect(AppDrawerController.load).toHaveBeenCalledTimes(1)
         expect(CheckboxController.load).toHaveBeenCalledTimes(1)
@@ -48,7 +48,7 @@ describe("Stimuli", () => {
         expect(TopBarController.load).toHaveBeenCalledTimes(1)
         expect(YoutubeController.load).toHaveBeenCalledTimes(1)
 
-        await import("stimuli/controllers/autoregister")
+        await import("controllers/autoregister")
 
         expect(AppDrawerController.load).toHaveBeenCalledTimes(1)
         expect(CheckboxController.load).toHaveBeenCalledTimes(1)

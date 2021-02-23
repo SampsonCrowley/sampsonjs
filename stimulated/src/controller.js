@@ -32,7 +32,7 @@ export class Controller extends StimulusController {
   nextDisconnect = () => new Promise(resolve => this.disconnectPromises.push(resolve))
 
   async connect() {
-    isDebugOrEnv("development") && console.log(`connecting: ${this.identifier} - ${this.element}`)
+    isDebugOrEnv("development") && console.debug(`connecting: ${this.identifier} - ${this.element}`)
     this._isConnected = true
     this.element["controllers"] = this.element["controllers"] || {}
     this.element["controllers"][this.identifier] = this
@@ -40,7 +40,7 @@ export class Controller extends StimulusController {
   }
 
   async disconnect() {
-    isDebugOrEnv("development") && console.log(`disconnecting: ${this.identifier} - ${this.element}`)
+    isDebugOrEnv("development") && console.debug(`disconnecting: ${this.identifier} - ${this.element}`)
     this._isConnected = false
     try {
       delete this.element["controllers"][this.identifier]

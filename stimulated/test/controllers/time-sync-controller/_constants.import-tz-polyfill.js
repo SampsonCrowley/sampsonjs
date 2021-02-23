@@ -1,4 +1,4 @@
-export { importTZPolyfill } from "stimuli/controllers/time-sync-controller/import-tz-polyfill"
+export { importTZPolyfill } from "controllers/time-sync-controller/import-tz-polyfill"
 
 
 let mockStatus

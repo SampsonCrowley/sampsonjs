@@ -1,6 +1,6 @@
-// stimuli/controllers/text-field-controller/text-field-controller.js
+// controllers/text-field-controller/text-field-controller.js
 import { MDCTextField } from "@material/textfield";
-import { TextFieldController } from "stimuli/controllers/text-field-controller"
+import { TextFieldController } from "controllers/text-field-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
 import {
           createTemplateController,
@@ -11,7 +11,7 @@ import {
           unregisterController
                                       } from "./_constants"
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("TextFieldController", () => {
 

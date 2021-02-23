@@ -3,20 +3,20 @@
 @use "@material/top-app-bar/mixins" as top-app-bar;
 @use "@material/top-app-bar/variables" as top-app-bar-variables;
 @use "@material/image-list";
-@use "material/styles/components/banner" with (
+@use "./components/banner" with (
   $error: material-theme.$error,
   $on-error: material-theme.$on-error,
   $success: material-theme.$primary,
   $on-success: material-theme.$on-primary
 );
-@use "material/styles/components/button";
-@use "material/styles/components/card" with (
+@use "./components/button";
+@use "./components/card" with (
   $primary: material-theme.$primary
 );
-@use "material/styles/components/drawer";
-@use "material/styles/components/grid";
-@use "material/styles/components/grid/mixins" as grid-mixins;
-@use "material/styles/components/footer";
+@use "./components/drawer";
+@use "./components/grid";
+@use "./components/grid/mixins" as grid-mixins;
+@use "./components/footer";
 @use "@material/theme/mixins" as mdc-mixins;
 
 .mdc-top-app-bar {

@@ -1,8 +1,31 @@
-import { SelectMenuController } from "stimuli/controllers/select-menu-controller"
-import { controllerRegistration } from "test-helpers/generators/stimulus/controller-registration"
-import { TemplateController } from "test-helpers/generators/stimulus/template-controller"
+import { SelectMenuController } from "controllers/select-menu-controller"
+import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
+import { TemplateController } from "../../test-helpers/generators/template-controller"
 
 SelectMenuController.bless()
+
+let dupCount = 0
+
+export const getDupedElements = () => {
+  const ogSelect = document.getElementById("test-select-menu"),
+        html = ogSelect.outerHTML,
+        count = ++dupCount
+
+  const div = document.createElement("DIV")
+  document.body.appendChild(div)
+
+  div.innerHTML = html.replace(/id\=\"test/g, `id="test-${count}`)
+
+  const select = document.getElementById(`test-${count}-select-menu`),
+        anchor = document.getElementById(`test-${count}-anchor`),
+        menu = document.getElementById(`test-${count}-menu`),
+        input = document.getElementById(`test-${count}-input`),
+        items = select.querySelectorAll(".mdc-select__menu .mdc-list"),
+        label = document.getElementById(`test-${count}-label`),
+        text = document.getElementById(`test-${count}-text`)
+
+  return { select, anchor, menu, input, items, label, text, count }
+}
 
 export const getElements = () => {
   const select = document.getElementById("test-select-menu"),
@@ -13,7 +36,7 @@ export const getElements = () => {
         label = document.getElementById("test-label"),
         text = document.getElementById("test-text")
 
-  return { select, input, items, label, text }
+  return { select, anchor, menu, input, items, label, text }
 }
 
 export const template = `
@@ -36,7 +59,7 @@ export const template = `
       </svg>
     </span><span class="mdc-line-ripple"></span>
   </div>
-  <div id="test-menu" class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--full-width" data-target="select-target.menu">
+  <div id="test-menu" class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--full-width" data-target="select-menu.menu">
     <ul class="mdc-list" role="listbox" aria-label="Estimated Credit Score listbox">
       <li class="mdc-list-item mdc-list-item--selected mdc-ripple-upgraded" role="option" data-value="" data-target="select-menu.item" aria-selected="true" tabindex="-1">
         <span class="mdc-list-item__ripple"></span>

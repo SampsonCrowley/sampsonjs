@@ -1,8 +1,37 @@
-import { DynamicLinkController } from "stimuli/controllers/dynamic-link-controller"
-import { controllerRegistration } from "test-helpers/generators/stimulus/controller-registration"
-import { TemplateController } from "test-helpers/generators/stimulus/template-controller"
+import { DynamicLinkController } from "controllers/dynamic-link-controller"
+import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
+import { TemplateController } from "../../test-helpers/generators/template-controller"
 
 DynamicLinkController.bless()
+
+export const enterKeys = [
+  { key: "Enter" },
+  { code: "Enter" },
+  { which: 13 },
+  { keyCode: 13 },
+]
+
+export const spaceKeys = [
+  { key: " " },
+  { code: "Space" },
+  { which: 32 },
+  { keyCode: 32 },
+]
+
+export const otherKeys = [
+  { key: "-" },
+  { code: "ShiftLeft" },
+  { key: "Shift" },
+  { which: 17 },
+  { keyCode: 4 },
+  { key: "A" },
+  { key: "n" },
+  { key: ")" },
+  { key: "0" },
+  { key: "Control" },
+  { code: "RightControl" },
+  { code: "Escape" },
+]
 
 export const getElements = () => {
   const wrapper            = document.getElementById("controller-wrapper"),

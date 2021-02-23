@@ -1,15 +1,17 @@
-// stimuli/controllers/dynamic-link-controller/dynamic-link-controller.js
-import { DynamicLinkController } from "stimuli/controllers/dynamic-link-controller"
-import { allStandardTags } from "test-helpers/all-standard-tags"
+// controllers/dynamic-link-controller/dynamic-link-controller.js
+import { DynamicLinkController } from "controllers/dynamic-link-controller"
+import { allStandardTags } from "../../test-helpers/all-standard-tags"
 import {
           createTemplateController,
           getElements,
           registerController,
-          unregisterController
+          unregisterController,
+          enterKeys,
+          spaceKeys,
+          otherKeys
                                     } from "./_constants"
 
-
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("DynamicLinkController", () => {
       it("has keyName 'dynamic-link'", () => {
@@ -286,6 +288,98 @@ describe("Stimuli", () => {
             controller.follow(simEvent)
 
             expect(link.href).toBe("a://adcdf")
+          })
+        })
+
+        describe(".followKeyboard", () => {
+          const controller = new DynamicLinkController()
+
+          it("calls .follow if Enter or Space is pressed", () => {
+            Object.defineProperty(controller, "follow", { value: jest.fn() })
+
+            let calledTimes = 0
+
+            for(const ev of otherKeys) {
+              expect(controller.follow).not.toHaveBeenCalled()
+            }
+
+            for(const ev of spaceKeys) {
+              controller.followKeyboard(ev)
+
+              expect(controller.follow).toHaveBeenCalledTimes(++calledTimes)
+              expect(controller.follow).toHaveBeenLastCalledWith(ev)
+            }
+
+            for(const ev of enterKeys) {
+              controller.followKeyboard(ev)
+
+              expect(controller.follow).toHaveBeenCalledTimes(++calledTimes)
+              expect(controller.follow).toHaveBeenLastCalledWith(ev)
+            }
+
+            expect(controller.follow).toHaveBeenCalledTimes(8)
+          })
+        })
+
+        describe(".followEnter", () => {
+          const controller = new DynamicLinkController()
+
+          it("calls .follow if Space is pressed", () => {
+            Object.defineProperty(controller, "follow", { value: jest.fn() })
+
+            let calledTimes = 0
+
+            for(const ev of otherKeys) {
+              controller.followEnter(ev)
+
+              expect(controller.follow).not.toHaveBeenCalled()
+            }
+
+            for(const ev of spaceKeys) {
+              controller.followEnter(ev)
+
+              expect(controller.follow).not.toHaveBeenCalled()
+            }
+
+            for(const ev of enterKeys) {
+              controller.followEnter(ev)
+
+              expect(controller.follow).toHaveBeenCalledTimes(++calledTimes)
+              expect(controller.follow).toHaveBeenLastCalledWith(ev)
+            }
+
+            expect(controller.follow).toHaveBeenCalledTimes(4)
+          })
+        })
+
+        describe(".followSpace", () => {
+          const controller = new DynamicLinkController()
+
+          it("calls .follow if Space is pressed", () => {
+            Object.defineProperty(controller, "follow", { value: jest.fn() })
+
+            let calledTimes = 0
+
+            for(const ev of otherKeys) {
+              controller.followSpace(ev)
+
+              expect(controller.follow).not.toHaveBeenCalled()
+            }
+
+            for(const ev of enterKeys) {
+              controller.followSpace(ev)
+
+              expect(controller.follow).not.toHaveBeenCalled()
+            }
+
+            for(const ev of spaceKeys) {
+              controller.followSpace(ev)
+
+              expect(controller.follow).toHaveBeenCalledTimes(++calledTimes)
+              expect(controller.follow).toHaveBeenLastCalledWith(ev)
+            }
+
+            expect(controller.follow).toHaveBeenCalledTimes(4)
           })
         })
 

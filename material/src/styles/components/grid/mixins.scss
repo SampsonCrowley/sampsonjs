@@ -21,24 +21,24 @@
 @use "sass:list";
 @use "sass:map";
 @use "sass:math";
-@use "../variables" as material-theme;
+@use "../../variables" as material-theme;
 
 // returns the lower grid boundary or null if the smallest grid is selected
 @function breakpoint-min($size) {
-  @if not map.has-key(variables.$columns, $size) {
-    @error "Invalid style specified! Choose one of #{map.keys(variables.$columns)}";
+  @if not map.has-key(material-theme.$columns, $size) {
+    @error "Invalid style specified! Choose one of #{map.keys(material-theme.$columns)}";
   }
-  $min: map.get(variables.$breakpoints, $size);
+  $min: map.get(material-theme.$breakpoints, $size);
 
   @return if($min > 0, $min, null);
 }
 
 // returns the upper grid boundary or null if the largest grid is selected
 @function breakpoint-max($size) {
-  @if not map.has-key(variables.$columns, $size) {
-    @error "Invalid style specified! Choose one of #{map.keys(variables.$columns)}";
+  @if not map.has-key(material-theme.$columns, $size) {
+    @error "Invalid style specified! Choose one of #{map.keys(material-theme.$columns)}";
   }
-  $names: map.keys(variables.$columns);
+  $names: map.keys(material-theme.$columns);
   $n: list.index($names, $size);
   $prev: if($n > 1, list.nth($names, $n - 1), null);
 
@@ -47,8 +47,8 @@
 
 // Private mixins, meant for internal use.
 @mixin media-query_($size) {
-  @if not map.has-key(variables.$columns, $size) {
-    @error "Invalid style specified! Choose one of #{map.keys(variables.$columns)}";
+  @if not map.has-key(material-theme.$columns, $size) {
+    @error "Invalid style specified! Choose one of #{map.keys(material-theme.$columns)}";
   }
 
   $min: breakpoint-min($size);
@@ -76,14 +76,14 @@
 }
 
 @mixin cell-span_($size, $span, $gutter) {
-  @if not map.has-key(variables.$columns, $size) {
-    @error "Invalid style specified! Choose one of #{map.keys(variables.$columns)}";
+  @if not map.has-key(material-theme.$columns, $size) {
+    @error "Invalid style specified! Choose one of #{map.keys(material-theme.$columns)}";
   }
 
   @if $span == 0 {
     display: none;
   } @else {
-    $percent: math.percentage($span / map.get(variables.$columns, $size));
+    $percent: math.percentage($span / map.get(material-theme.$columns, $size));
 
     @if $percent > 100% {
       $percent: 100%;
@@ -96,15 +96,15 @@
 
     @supports (display: grid) {
       width: auto;
-      grid-column-end: span math.min($span, map.get(variables.$columns, $size));
+      grid-column-end: span math.min($span, map.get(material-theme.$columns, $size));
     }
   }
 }
 
 // Public mixins, meant for developer usage.
 @mixin layout-grid($size, $margin, $max-width: null) {
-  @if not map.has-key(variables.$columns, $size) {
-    @error "Invalid style specified! Choose one of #{map.keys(variables.$columns)}";
+  @if not map.has-key(material-theme.$columns, $size) {
+    @error "Invalid style specified! Choose one of #{map.keys(material-theme.$columns)}";
   }
 
   box-sizing: border-box;
@@ -119,8 +119,8 @@
 }
 
 @mixin inner($size, $margin, $gutter) {
-  @if not map.has-key(variables.$columns, $size) {
-    @error "Invalid style specified! Choose one of #{map.keys(variables.$columns)}";
+  @if not map.has-key(material-theme.$columns, $size) {
+    @error "Invalid style specified! Choose one of #{map.keys(material-theme.$columns)}";
   }
 
   display: flex;
@@ -136,13 +136,13 @@
     grid-gap: $gutter;
     // stylelint-disable-next-line declaration-block-no-duplicate-properties
     grid-gap: var(--mdc-layout-grid-gutter-#{$size}, $gutter);
-    grid-template-columns: repeat(map.get(variables.$columns, $size), minmax(0, 1fr));
+    grid-template-columns: repeat(map.get(material-theme.$columns, $size), minmax(0, 1fr));
   }
 }
 
 @mixin cell($size, $default-span, $gutter) {
-  @if not map.has-key(variables.$columns, $size) {
-    @error "Invalid style specified! Choose one of #{map.keys(variables.$columns)}";
+  @if not map.has-key(material-theme.$columns, $size) {
+    @error "Invalid style specified! Choose one of #{map.keys(material-theme.$columns)}";
   }
 
   @include cell-span_($size, $default-span, $gutter);
@@ -188,11 +188,11 @@
 }
 
 @mixin fixed-column-width($size, $margin, $gutter, $column-width) {
-  @if not map.has-key(variables.$columns, $size) {
-    @error "Invalid style specified! Choose one of #{map.keys(variables.$columns)}";
+  @if not map.has-key(material-theme.$columns, $size) {
+    @error "Invalid style specified! Choose one of #{map.keys(material-theme.$columns)}";
   }
 
-  $columnCount: map.get(variables.$columns, $size);
+  $columnCount: map.get(material-theme.$columns, $size);
   $gutter-number: $columnCount - 1;
   $margin-number: 2;
 

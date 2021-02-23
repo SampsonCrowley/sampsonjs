@@ -1,6 +1,6 @@
-import { TextFieldController } from "stimuli/controllers/text-field-controller"
-import { controllerRegistration } from "test-helpers/generators/stimulus/controller-registration"
-import { TemplateController } from "test-helpers/generators/stimulus/template-controller"
+import { TextFieldController } from "controllers/text-field-controller"
+import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
+import { TemplateController } from "../../test-helpers/generators/template-controller"
 
 TextFieldController.bless()
 

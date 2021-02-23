@@ -1,16 +1,44 @@
 import { Controller } from "../../controller"
+import { isDebugOrEnv } from "@sampsonjs/helpers/is-env"
 
 export class DynamicLinkController extends Controller {
   static keyName = "dynamic-link"
 
+  isEnter(ev) {
+    if(ev.code) return ev.code === "Enter"
+    if(ev.key) return ev.key === "Enter"
+    if("which" in ev) return ev.which === 13
+    return ev.keyCode === 13
+  }
+
+  isSpace(ev) {
+    if(ev.code) return ev.code === "Space"
+    if(ev.key) return ev.key === " "
+    if("which" in ev) return ev.which === 32
+    return ev.keyCode === 32
+  }
+
+  followKeyboard = (ev) => {
+    if(this.isEnter(ev) || this.isSpace(ev)) this.follow(ev)
+  }
+
+  followEnter = (ev) => {
+    if(this.isEnter(ev)) this.follow(ev)
+  }
+
+  followSpace = (ev) => {
+    if(this.isSpace(ev)) this.follow(ev)
+  }
+
   follow = (ev) => {
-    console.log(ev, ev.target, ev.currentTarget)
     ev.preventDefault()
 
-    console.debug(ev)
+    isDebugOrEnv("development") && console.debug(ev)
 
-    const link = this.getLinkFromTarget(ev.target)
-    console.log(link, link.href, ev.target, ev.currentTarget)
+    const link = this.getLinkFromTarget(ev.currentTarget)
+
+    isDebugOrEnv("development") && console.debug(link, link.href, ev.target, ev.currentTarget)
+
     if("replace" in ev.target.dataset) {
       const split = ev.target.dataset.replace.split("|")
       while(split.length > 0) {
@@ -19,7 +47,7 @@ export class DynamicLinkController extends Controller {
       }
     }
 
-    console.log(link, link.href)
+    isDebugOrEnv("development") && console.debug(link, link.href)
 
     link.click()
   }

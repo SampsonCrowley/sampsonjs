@@ -10,7 +10,7 @@
   min-height: 192px;
   margin-top: 144px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
 
@@ -106,6 +106,14 @@
           max-height: 14px;
         }
       }
+    }
+  }
+
+  &__inner ~ &__inner {
+    border-top: 2px solid material-theme.$secondary;
+
+    .column {
+      border: none !important;
     }
   }
 }

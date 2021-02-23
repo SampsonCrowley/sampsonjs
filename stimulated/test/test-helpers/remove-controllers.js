@@ -1,4 +1,4 @@
-import { sleepAsync } from "./sleep-async"
+import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
 
 export const removeControllers = async () => {
   const promises = []

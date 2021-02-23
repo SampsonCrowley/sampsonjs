@@ -1,4 +1,4 @@
-// stimuli/controllers/dropzone-controller/dropzone-controller.js
+// controllers/dropzone-controller/dropzone-controller.js
 import {
           createTemplateController,
           Dropzone,
@@ -19,10 +19,10 @@ import {
           unregisterController
                                       } from "./_constants.dropzone-controller"
 
-jest.mock("helpers/get-meta-value")
-jest.mock("helpers/find-element")
-jest.mock("helpers/remove-element")
-jest.mock("stimuli/controllers/dropzone-controller/upload-manager")
+jest.mock("@sampsonjs/helpers/get-meta-value")
+jest.mock("@sampsonjs/helpers/find-element")
+jest.mock("@sampsonjs/helpers/remove-element")
+jest.mock("controllers/dropzone-controller/upload-manager")
 
 getMetaValue.mockImplementation(getMetaValueImplementation)
 findElement.mockImplementation(findElementImplementation)
@@ -37,7 +37,7 @@ const clearMocks = () => {
   UploadManager.mockClear()
 }
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("DropzoneController", () => {
       beforeEach(clearMocks)

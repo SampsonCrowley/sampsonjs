@@ -1,4 +1,4 @@
-import { mockScope } from "test-helpers/generators/stimulus/mock-scope"
+import { mockScope } from "./mock-scope"
 
 export const TemplateController = (klass, template, query = "#wrapper") => {
   return () => {

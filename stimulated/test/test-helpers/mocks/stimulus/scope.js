@@ -1,7 +1,7 @@
 import { DataMap } from "./data-map"
 import { Schema } from "./schema"
 import { TargetSet } from "./target-set"
-import { attributeContainsToken } from "test-helpers/attribute-contains-token";
+import { attributeContainsToken } from "../../attribute-contains-token";
 
 export class Scope {
   constructor(identifier, element) {

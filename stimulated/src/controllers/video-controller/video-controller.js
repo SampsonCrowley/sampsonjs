@@ -1,4 +1,5 @@
 import { Controller } from "../../controller"
+import { isDebugOrEnv } from "@sampsonjs/helpers/is-env"
 
 export class VideoController extends Controller {
   static keyName = "video"
@@ -15,7 +16,7 @@ export class VideoController extends Controller {
   sourcesNotPlayable = () => {
     try {
       this.sourceTargets.forEach(source => {
-        console.debug(source, this.videoTarget.canPlayType(source.type))
+        isDebugOrEnv("development") && console.debug(source, this.videoTarget.canPlayType(source.type))
         if(this.videoTarget.canPlayType(source.type)) throw new Error("playable")
       })
       return true

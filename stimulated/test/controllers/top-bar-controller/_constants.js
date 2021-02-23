@@ -1,5 +1,5 @@
-import { TopBarController } from "stimuli/controllers/top-bar-controller"
-import { controllerRegistration } from "test-helpers/generators/stimulus/controller-registration"
+import { TopBarController } from "controllers/top-bar-controller"
+import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 
 export const getElements = () => {
   const wrapper = document.getElementById("test-top-bar"),

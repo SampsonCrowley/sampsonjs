@@ -9,7 +9,8 @@
     "build": "bin/build",
     "build:all": "yarn build:helpers & yarn build:stimulated",
     "build:helpers": "bin/build helpers",
-    "build:stimulated": "bin/build stimulated"
+    "build:stimulated": "bin/build stimulated",
+    "test": "yarn --cwd helpers test"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",

@@ -1,8 +1,8 @@
-import { YoutubeController } from "stimuli/controllers/youtube-controller"
-import { controllerRegistration } from "test-helpers/generators/stimulus/controller-registration"
-import { TemplateController } from "test-helpers/generators/stimulus/template-controller"
-import { Player } from "test-helpers/mocks/yt/player"
-export { mockScope } from "test-helpers/generators/stimulus/mock-scope"
+import { YoutubeController } from "controllers/youtube-controller"
+import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
+import { TemplateController } from "../../test-helpers/generators/template-controller"
+import { Player } from "../../test-helpers/mocks/yt/player"
+export { mockScope } from "../../test-helpers/generators/mock-scope"
 export { importScript } from "@sampsonjs/helpers/import-script"
 export { uniqueId } from "@sampsonjs/helpers/unique-id"
 

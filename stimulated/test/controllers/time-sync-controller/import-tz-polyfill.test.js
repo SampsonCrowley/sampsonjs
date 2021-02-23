@@ -1,4 +1,4 @@
-// stimuli/controllers/time-sync-controller/import-tz-polyfill.js
+// controllers/time-sync-controller/import-tz-polyfill.js
 import {
           format,
           importTZPolyfill,
@@ -11,7 +11,7 @@ import {
 
 jest.mock("date-time-format-timezone", () => "MOCKED")
 
-describe("Stimuli", () => {
+describe("Stimulated", () => {
   describe("Controllers", () => {
     describe("TimeSyncController", () => {
       describe("helpers", () => {

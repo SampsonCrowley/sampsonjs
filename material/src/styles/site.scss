@@ -43,9 +43,9 @@
 );
 
 // Import framework components
-@use "material/styles/framework";
+@use "./framework";
 
 // Import site-specific CSS files
-@use "material/styles/components";
-@use "material/styles/offsets";
-@use "material/styles/other";
+@use "./components";
+@use "./offsets";
+@use "./other";
