@@ -11,7 +11,8 @@
 );
 @use "./components/button";
 @use "./components/card" with (
-  $primary: material-theme.$primary
+  $primary: material-theme.$primary,
+  $alternate-overlay-background: material-theme.$alternate-overlay-background
 );
 @use "./components/drawer";
 @use "./components/grid";
@@ -285,26 +286,6 @@
   //     }
   //   }
   // }
-}
-
-.mountain-background {
-  // background-image: url(~images/mountains.webp);
-  background-image: url(~images/mountains/mountains-full.webp);
-
-  @media(max-height: 2000px), (max-width: 1328px) {
-    background-image: url(~images/mountains/mountains-massive.webp);
-  }
-  @media(max-height: 1200px), (max-width: 797px) {
-    background-image: url(~images/mountains/mountains-large.webp);
-  }
-
-  @media(max-height: 659px), (max-width: 992px) {
-    background-image: url(~images/mountains/mountains-medium.webp);
-  }
-
-  @media(max-height: 510px), (max-width: 768px) {
-    background-image: url(~images/mountains/mountains-small.webp);
-  }
 }
 
 // .mdc-text-field {

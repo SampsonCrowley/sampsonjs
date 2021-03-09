@@ -241,7 +241,7 @@ button,
   .clickable,
   .clipboard-button.mdc-fab {
     cursor: pointer;
-    cursor: url(~images/clipboard.svg) 4 2, pointer;
+    cursor: url(material-theme.$clipboard-image) 4 2, pointer;
     pointer-events: all;
   }
 }

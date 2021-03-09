@@ -1,6 +1,7 @@
 @use "./card/mixins" as card-mixins;
 $primary: null !default;
 $prefix: mdc-card;
+$alternate-overlay-background: null !default;
 
 .grid-media-wrapper {
   display: flex;
@@ -119,7 +120,7 @@ $prefix: mdc-card;
           &.alt-background {
             &::after {
               background-size: 20%, 50%;
-              background-image: url($replay-icon), url(~images/logo-white.png);
+              background-image: url($replay-icon), url($alternate-overlay-background);
             }
           }
 
@@ -182,7 +183,7 @@ $prefix: mdc-card;
           &.alt-background.paused-background {
             &::after {
               background-size: 20%, 50%;
-              background-image: url($play-button-icon), url(~images/logo-white.png);
+              background-image: url($play-button-icon), url($alternate-overlay-background);
             }
           }
 
