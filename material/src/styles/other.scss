@@ -14,21 +14,37 @@ body {
   .bg-primary {
     background: material-theme.$primary;
     color: material-theme.$on-primary;
+    &-force {
+      background: material-theme.$primary !important;
+      color: material-theme.$on-primary !important;
+    }
   }
 
   .bg-secondary {
     background: material-theme.$secondary;
     color: material-theme.$on-secondary;
+    &-force {
+      background: material-theme.$secondary !important;
+      color: material-theme.$on-secondary !important;
+    }
   }
 
   .bg-error {
     background: material-theme.$error;
     color: material-theme.$on-error;
+    &-force {
+      background: material-theme.$error !important;
+      color: material-theme.$on-error !important;
+    }
   }
 
   .bg-white {
     background: material-theme.$white;
     color: material-theme.$black;
+    &-force {
+      background: material-theme.$white !important;
+      color: material-theme.$black !important;
+    }
   }
 
   .bg-form-field {
@@ -156,21 +172,6 @@ body {
           }
         }
       }
-    }
-  }
-}
-
-.intro {
-  min-height: calc(100vh - 384px);
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-
-  .prototype {
-    @media(max-width: map.get(material-theme.$breakpoints, tablet) - 1px) {
-      max-width: 75%;
-      max-width: 30vh;
     }
   }
 }
