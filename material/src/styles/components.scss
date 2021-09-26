@@ -36,7 +36,7 @@
     box-sizing: border-box;
     width: 100%;
     height: 32px;
-    height: top-app-bar-variables.$row-height / 2;
+    height: math.div(top-app-bar-variables.$row-height, 2);
     transition: top 200ms linear 200ms;
     transition: height 200ms linear 200ms;
     @include mdc-mixins.prop(background-color, material-theme.$dark);
@@ -180,10 +180,10 @@
 
           &__under-bar {
             height: 32px;
-            height: top-app-bar-variables.$row-height / 2;
+            height: math.div(top-app-bar-variables.$row-height, 2);
             box-shadow: #dcdcdc 0px 2px 10px;
             font-size: 16px;
-            font-size: top-app-bar-variables.$row-height / 4;
+            font-size: math.div(top-app-bar-variables.$row-height, 4);
             line-height: 1;
             top: 64px;
             top: top-app-bar-variables.$row-height;
