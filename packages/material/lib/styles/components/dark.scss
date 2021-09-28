@@ -1,0 +1,45 @@
+@use "sass:map";
+@use "../variables" as material-theme;
+@use "@material/theme/mixins" as mdc-mixins;
+
+.dark-bg {
+  // The minimum width at which the "Made with MDC web" link is visible.
+  @include mdc-mixins.prop(background-color, material-theme.$dark);
+  @include mdc-mixins.prop(color, material-theme.$on-dark);
+
+  .mdc-list-item,
+  .mdc-deprecated-list-item {
+    @include mdc-mixins.prop(color, material-theme.$on-dark);
+
+    &.flex-around {
+      justify-content: space-around;
+    }
+
+    &__meta,
+    &__graphic {
+      @include mdc-mixins.prop(color, material-theme.$on-dark);
+    }
+
+    &__meta {
+      margin-left: 32px;
+    }
+
+    & img.icon {
+      max-height: 18px;
+    }
+
+    &__primary-text,
+    &__secondary-text {
+      @include mdc-mixins.prop(color, material-theme.$on-dark);
+
+    }
+
+    @media(min-width: map.get(material-theme.$breakpoints, tablet)) and (max-width: map.get(material-theme.$breakpoints, desktop) - 1px) {
+      font-size: 12px;
+
+      & img.icon {
+        max-height: 14px;
+      }
+    }
+  }
+}

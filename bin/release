@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-script_path=$(realpath $0)
-bin_path=$(dirname $script_path)
-root_path=$(dirname $bin_path)
-pkg_path="$root_path/$1"
+script_path="$(realpath "$0")"
+bin_path="$(dirname "${script_path}")"
+root_path="$(dirname "${bin_path}")"
+pkg_path="${root_path}/packages/${1}"
 
-"$bin_path/build" "$1"
-npm publish --access=public "$pkg_path/dist"
+npm publish --access=public "$pkg_path/lib"

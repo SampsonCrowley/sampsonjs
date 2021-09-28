@@ -1,0 +1,19 @@
+{
+  "name": "@sampsonjs/helpers",
+  "version": "1.0.0-alpha.4",
+  "description": "A collection of lightweight, reusable vanilla JS helpers",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/SampsonCrowley/sampsonjs.git"
+  },
+  "keywords": [
+    "helpers"
+  ],
+  "author": "Sampson Crowley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SampsonCrowley/sampsonjs/issues"
+  },
+  "homepage": "https://github.com/SampsonCrowley/sampsonjs/tree/main/packages/helpers"
+}

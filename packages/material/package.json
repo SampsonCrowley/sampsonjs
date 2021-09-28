@@ -1,0 +1,18 @@
+{
+  "name": "material",
+  "description": "Script Runner and Builder File for the SampsonJS Material Package",
+  "scripts": {
+    "build": "yarn --cwd ../../ build material",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "material-components-web": "^13.0.0"
+  },
+  "author": "Sampson Crowley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SampsonCrowley/sampsonjs/issues"
+  },
+  "homepage": "https://github.com/SampsonCrowley/sampsonjs/tree/main/packages/material"
+}

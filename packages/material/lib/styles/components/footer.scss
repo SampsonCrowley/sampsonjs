@@ -1,0 +1,102 @@
+@use "sass:map";
+@use "../variables" as material-theme;
+@use "@material/theme/mixins" as mdc-mixins;
+
+.footer {
+  // The minimum width at which the "Made with MDC web" link is visible.
+  min-height: 192px;
+  margin-top: 144px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  &-grid {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 100%;
+    max-width: 1300px;
+    max-width:material-theme.$max-width;
+
+    padding: 16px;
+    padding: var(--mdc-layout-grid-margin-tablet, 16px);
+
+    @media(min-width: map.get(material-theme.$breakpoints, desktop)) {
+      padding: 24px;
+      padding: var(--mdc-layout-grid-margin-desktop, 24px);
+    }
+
+    &__inner {
+      flex: 1 0 100%;
+      display: flex;
+      flex-flow: column nowrap;
+
+      h2 {
+        margin-top: .8em;
+        margin-bottom: .8em;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      &, .column {
+        border: 1px solid material-theme.$secondary;
+      }
+
+      .column {
+        padding: 2rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        &.flex-list-center {
+          .mdc-list-item,
+          .mdc-deprecated-list-item {
+            justify-content: center;
+          }
+        }
+      }
+
+      @media(max-width: map.get(material-theme.$breakpoints, tablet) - 1px) {
+        border: none;
+
+        .column {
+          border: none;
+          border-bottom: 2px solid material-theme.$secondary;
+
+          &:last-child {
+            border-bottom: none
+          }
+        }
+
+        h2 {
+          margin-top: 0;
+          margin-bottom: .5em;
+        }
+      }
+
+      @media(min-width: map.get(material-theme.$breakpoints, tablet)) {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .column {
+          flex: 1 1 auto;
+
+          &-full {
+            flex: 0 1 100%
+          }
+        }
+      }
+    }
+  }
+  //
+  // &__inner ~ &__inner {
+  //   // border-top: 2px solid material-theme.$secondary;
+  //
+  //   // .column {
+  //   //   border: none !important;
+  //   // }
+  // }
+}

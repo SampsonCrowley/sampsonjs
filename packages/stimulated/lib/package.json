@@ -1,0 +1,33 @@
+{
+  "name": "@sampsonjs/stimulated",
+  "version": "1.0.0-alpha.5",
+  "description": "Prewritten and extensible StimulusJS Controllers with a plug and play init system",
+  "main": "index.js",
+  "peerDependencies": {
+    "@rails/activestorage": "^6.0.0",
+    "@sampsonjs/helpers": "1.0.0-alpha.4",
+    "core-js": "^3.4.0",
+    "date-fns": "^2.16.1",
+    "date-fns-tz": "^1.0.12",
+    "date-time-format-timezone": "^1.0.22",
+    "dropzone": "^5.7.2",
+    "element-closest": "^3.0.2",
+    "material-components-web": "^13.0.0",
+    "mutation-observer-inner-html-shim": "^1.0.1",
+    "stimulus": "^1.1.1",
+    "stimulus_reflex": "^3.1.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/SampsonCrowley/sampsonjs.git"
+  },
+  "keywords": [
+    "stimulus"
+  ],
+  "author": "Sampson Crowley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SampsonCrowley/sampsonjs/issues"
+  },
+  "homepage": "https://github.com/SampsonCrowley/sampsonjs/tree/main/packages/stimulated"
+}
