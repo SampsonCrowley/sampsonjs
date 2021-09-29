@@ -1,7 +1,9 @@
 // controllers/select-menu-controller/select-menu-controller.js
+import { SelectMenuController } from "@sampsonjs/stimulated/controllers/select-menu-controller"
+
 import { MDCSelect } from "@material/select";
-import { SelectMenuController } from "controllers/select-menu-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
+
 import {
           createTemplateController,
           getDupedElements,

@@ -1,5 +1,5 @@
 // controllers/dropzone-controller/upload-manager.js
-import { UploadManager } from "controllers/dropzone-controller/upload-manager"
+import { UploadManager } from "@sampsonjs/stimulated/controllers/dropzone-controller/upload-manager"
 import { DirectUpload } from "@rails/activestorage"
 import { removeElement } from "@sampsonjs/helpers/remove-element"
 import { insertAfter } from "@sampsonjs/helpers/insert-after"

@@ -1,7 +1,9 @@
 // controllers/text-field-controller/text-field-controller.js
+import { TextFieldController } from "@sampsonjs/stimulated/controllers/text-field-controller"
+
 import { MDCTextField } from "@material/textfield";
-import { TextFieldController } from "controllers/text-field-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
+
 import {
           createTemplateController,
           getElements,

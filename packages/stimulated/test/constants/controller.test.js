@@ -1,9 +1,12 @@
 // stimuli/constants/controller.js
-import { Application } from "application"
-import { Controller } from "controller"
+import { Application } from "@sampsonjs/stimulated/application"
+import { Controller } from "@sampsonjs/stimulated/controller"
 import { Scope } from "../test-helpers/mocks/stimulus/scope"
 
-jest.mock("application", () => ({ Application: { register: jest.fn(), unload: jest.fn() } }))
+jest.mock(
+  "@sampsonjs/stimulated/application",
+  () => ({ Application: { register: jest.fn(), unload: jest.fn() } })
+)
 
 const testKeys = []
 for(let i = 0; i < 10; i++) testKeys.push(`test-key-${Math.random()}`.replace(/\./g, ""))

@@ -1,4 +1,5 @@
-import { TextFieldController } from "controllers/text-field-controller"
+import { TextFieldController } from "@sampsonjs/stimulated/controllers/text-field-controller"
+
 import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 import { TemplateController } from "../../test-helpers/generators/template-controller"
 

@@ -1,6 +1,8 @@
 // controllers/time-sync-controller/time-sync-controller.js
+import { TimeSyncController } from "@sampsonjs/stimulated/controllers/time-sync-controller"
+
 import { MDCTextField } from "@material/textfield";
-import { TimeSyncController } from "controllers/time-sync-controller"
+
 import {
           createTemplateController,
           getElements,

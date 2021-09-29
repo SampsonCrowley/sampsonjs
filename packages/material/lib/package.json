@@ -1,6 +1,6 @@
 {
   "name": "@sampsonjs/material",
-  "version": "1.0.0-alpha.15",
+  "version": "1.0.0-alpha.17",
   "description": "A preconfigured extended and overridable Material UI SCSS framework",
   "main": "index.js",
   "peerDependencies": {

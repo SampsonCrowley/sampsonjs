@@ -1,4 +1,4 @@
-import { ListController } from "controllers/list-controller"
+import { ListController } from "@sampsonjs/stimulated/controllers/list-controller"
 import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 
 ListController.bless()

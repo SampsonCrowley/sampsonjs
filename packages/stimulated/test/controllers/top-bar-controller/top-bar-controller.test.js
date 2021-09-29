@@ -1,6 +1,7 @@
 // controllers/top-bar-controller/top-bar-controller.js
+import { TopBarController } from "@sampsonjs/stimulated/controllers/top-bar-controller"
+
 import { MDCTopAppBar } from '@material/top-app-bar';
-import { TopBarController } from "controllers/top-bar-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
 import {
           getElements,

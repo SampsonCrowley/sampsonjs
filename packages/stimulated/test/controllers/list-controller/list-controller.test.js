@@ -1,13 +1,13 @@
 // controllers/list-controller/list-controller.js
+import { ListController } from "@sampsonjs/stimulated/controllers/list-controller"
+
 import { MDCList } from "@material/list";
 import { MDCRipple } from '@material/ripple';
-import { ListController } from "controllers/list-controller"
 import { removeControllers } from "../../test-helpers/remove-controllers"
-import {
-          getElements,
+
+import {  getElements,
           registerController,
-          unregisterController
-                                } from "./_constants"
+          unregisterController } from "./_constants"
 
 
 describe("Stimulated", () => {

@@ -1,4 +1,5 @@
-import { TimeSyncController } from "controllers/time-sync-controller"
+import { TimeSyncController } from "@sampsonjs/stimulated/controllers/time-sync-controller"
+
 import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 import { TemplateController } from "../../test-helpers/generators/template-controller"
 

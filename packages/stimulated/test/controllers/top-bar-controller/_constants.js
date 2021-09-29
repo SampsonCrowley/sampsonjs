@@ -1,4 +1,5 @@
-import { TopBarController } from "controllers/top-bar-controller"
+import { TopBarController } from "@sampsonjs/stimulated/controllers/top-bar-controller"
+
 import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 
 export const getElements = () => {

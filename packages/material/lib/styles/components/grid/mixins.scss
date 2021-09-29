@@ -200,8 +200,8 @@
   // stylelint-disable-next-line declaration-block-no-duplicate-properties
   width:
     'calc(
-      var(--mdc-layout-grid-column-width-#{$size}, #{$column-width}) * #{$columnCount} +
-      var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) * #{$gutter-number} +
+      var(--mdc-layout-grid-column-width-#{$size}, #{$column-width}) * #{$columnCount} + 
+      var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) * #{$gutter-number} + 
       var(--mdc-layout-grid-margin-#{$size}, #{$margin}) * #{$margin-number}
     )';
 }

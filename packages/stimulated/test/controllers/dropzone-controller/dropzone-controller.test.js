@@ -22,7 +22,7 @@ import {
 jest.mock("@sampsonjs/helpers/get-meta-value")
 jest.mock("@sampsonjs/helpers/find-element")
 jest.mock("@sampsonjs/helpers/remove-element")
-jest.mock("controllers/dropzone-controller/upload-manager")
+jest.mock("@sampsonjs/stimulated/controllers/dropzone-controller/upload-manager")
 
 getMetaValue.mockImplementation(getMetaValueImplementation)
 findElement.mockImplementation(findElementImplementation)

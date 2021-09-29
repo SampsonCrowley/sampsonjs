@@ -1,9 +1,11 @@
-import { DropzoneController } from "controllers/dropzone-controller"
-import { UploadManager } from "controllers/dropzone-controller/upload-manager"
-import { default as Dropzone } from "dropzone"
+import { DropzoneController } from "@sampsonjs/stimulated/controllers/dropzone-controller"
+import { UploadManager } from "@sampsonjs/stimulated/controllers/dropzone-controller/upload-manager"
+
 import { getMetaValue } from "@sampsonjs/helpers/get-meta-value"
 import { findElement } from "@sampsonjs/helpers/find-element"
 import { removeElement } from "@sampsonjs/helpers/remove-element"
+import { default as Dropzone } from "dropzone"
+
 import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 import { TemplateController } from "../../test-helpers/generators/template-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"

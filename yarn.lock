@@ -531,7 +531,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-proposal-private-property-in-object@npm:^7.15.4":
+"@babel/plugin-proposal-private-property-in-object@npm:7.15.4, @babel/plugin-proposal-private-property-in-object@npm:^7.15.4":
   version: 7.15.4
   resolution: "@babel/plugin-proposal-private-property-in-object@npm:7.15.4"
   dependencies:
@@ -1008,7 +1008,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-regenerator@npm:^7.14.5":
+"@babel/plugin-transform-regenerator@npm:7.14.5, @babel/plugin-transform-regenerator@npm:^7.14.5":
   version: 7.14.5
   resolution: "@babel/plugin-transform-regenerator@npm:7.14.5"
   dependencies:
@@ -2328,12 +2328,60 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@sampsonjs/stimulated@workspace:packages/stimulated/lib":
+"@sampsonjs/stimulated@workspace:*, @sampsonjs/stimulated@workspace:packages/stimulated/lib":
   version: 0.0.0-use.local
   resolution: "@sampsonjs/stimulated@workspace:packages/stimulated/lib"
   peerDependencies:
+    "@material/animation": ^13.0.0
+    "@material/auto-init": ^13.0.0
+    "@material/banner": ^13.0.0
+    "@material/base": ^13.0.0
+    "@material/button": ^13.0.0
+    "@material/card": ^13.0.0
+    "@material/checkbox": ^13.0.0
+    "@material/chips": ^13.0.0
+    "@material/circular-progress": ^13.0.0
+    "@material/data-table": ^13.0.0
+    "@material/density": ^13.0.0
+    "@material/dialog": ^13.0.0
+    "@material/dom": ^13.0.0
+    "@material/drawer": ^13.0.0
+    "@material/elevation": ^13.0.0
+    "@material/fab": ^13.0.0
+    "@material/feature-targeting": ^13.0.0
+    "@material/floating-label": ^13.0.0
+    "@material/form-field": ^13.0.0
+    "@material/icon-button": ^13.0.0
+    "@material/image-list": ^13.0.0
+    "@material/layout-grid": ^13.0.0
+    "@material/line-ripple": ^13.0.0
+    "@material/linear-progress": ^13.0.0
+    "@material/list": ^13.0.0
+    "@material/menu": ^13.0.0
+    "@material/menu-surface": ^13.0.0
+    "@material/notched-outline": ^13.0.0
+    "@material/radio": ^13.0.0
+    "@material/ripple": ^13.0.0
+    "@material/rtl": ^13.0.0
+    "@material/segmented-button": ^13.0.0
+    "@material/select": ^13.0.0
+    "@material/shape": ^13.0.0
+    "@material/slider": ^13.0.0
+    "@material/snackbar": ^13.0.0
+    "@material/switch": ^13.0.0
+    "@material/tab": ^13.0.0
+    "@material/tab-bar": ^13.0.0
+    "@material/tab-indicator": ^13.0.0
+    "@material/tab-scroller": ^13.0.0
+    "@material/textfield": ^13.0.0
+    "@material/theme": ^13.0.0
+    "@material/tokens": ^13.0.0
+    "@material/tooltip": ^13.0.0
+    "@material/top-app-bar": ^13.0.0
+    "@material/touch-target": ^13.0.0
+    "@material/typography": ^13.0.0
     "@rails/activestorage": ^6.0.0
-    "@sampsonjs/helpers": "*"
+    "@sampsonjs/helpers": 1.0.0-alpha.5
     core-js: ^3.4.0
     date-fns: ^2.16.1
     date-fns-tz: ^1.0.12
@@ -2856,13 +2904,6 @@ __metadata:
   peerDependencies:
     "@babel/core": ^7.0.0-0
   checksum: 3e32e318fd91d65c3af2bb363189f00d3839f07a73a08813b553553e07da205162091b428dd5b6ffb6ea4caf531ff43ebc54197b0a5a9dc2fc5c7e9a650e946d
-  languageName: node
-  linkType: hard
-
-"babel-plugin-syntax-dynamic-import@npm:^6.18.0":
-  version: 6.18.0
-  resolution: "babel-plugin-syntax-dynamic-import@npm:6.18.0"
-  checksum: 0a7a98ecb63878d65d4fd35e5435b0a7ad8e5c43b394389ce82298733c7a5d95c4373f1dd68566694214dad64abd0fec1e4eb7ee9ca7d1ee06d502e630d61600
   languageName: node
   linkType: hard
 
@@ -4082,6 +4123,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"has-flag@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "has-flag@npm:5.0.1"
+  checksum: e0a151db8e43b528258c4269c23224c691b42c1f5168f6d88b61c3f9398ef16d44226a78a0596642da55851cf306a8afe57d6936d4d69a24b66fd10de1373da8
+  languageName: node
+  linkType: hard
+
 "has-symbols@npm:^1.0.1":
   version: 1.0.2
   resolution: "has-symbols@npm:1.0.2"
@@ -4151,11 +4199,11 @@ __metadata:
     "@babel/cli": ^7.12.10
     "@babel/core": ^7.12.10
     "@babel/plugin-proposal-class-properties": ^7.12.1
+    "@babel/plugin-syntax-dynamic-import": ^7.8.3
     "@babel/plugin-transform-destructuring": ^7.12.1
     "@babel/plugin-transform-runtime": ^7.12.10
     "@babel/preset-env": ^7.12.11
     babel-plugin-macros: ^3.0.1
-    babel-plugin-syntax-dynamic-import: ^6.18.0
     jest: ^26.4.2
   languageName: unknown
   linkType: soft
@@ -6744,13 +6792,67 @@ __metadata:
     "@babel/cli": ^7.12.10
     "@babel/core": ^7.12.10
     "@babel/plugin-proposal-class-properties": ^7.12.1
+    "@babel/plugin-proposal-object-rest-spread": ^7.15.6
+    "@babel/plugin-proposal-private-methods": ^7.14.5
+    "@babel/plugin-proposal-private-property-in-object": 7.15.4
+    "@babel/plugin-syntax-dynamic-import": ^7.8.3
     "@babel/plugin-transform-destructuring": ^7.12.1
+    "@babel/plugin-transform-regenerator": 7.14.5
     "@babel/plugin-transform-runtime": ^7.12.10
     "@babel/preset-env": ^7.12.11
+    "@material/animation": ^13.0.0
+    "@material/auto-init": ^13.0.0
+    "@material/banner": ^13.0.0
+    "@material/base": ^13.0.0
+    "@material/button": ^13.0.0
+    "@material/card": ^13.0.0
+    "@material/checkbox": ^13.0.0
+    "@material/chips": ^13.0.0
+    "@material/circular-progress": ^13.0.0
+    "@material/data-table": ^13.0.0
+    "@material/density": ^13.0.0
+    "@material/dialog": ^13.0.0
+    "@material/dom": ^13.0.0
+    "@material/drawer": ^13.0.0
+    "@material/elevation": ^13.0.0
+    "@material/fab": ^13.0.0
+    "@material/feature-targeting": ^13.0.0
+    "@material/floating-label": ^13.0.0
+    "@material/form-field": ^13.0.0
+    "@material/icon-button": ^13.0.0
+    "@material/image-list": ^13.0.0
+    "@material/layout-grid": ^13.0.0
+    "@material/line-ripple": ^13.0.0
+    "@material/linear-progress": ^13.0.0
+    "@material/list": ^13.0.0
+    "@material/menu": ^13.0.0
+    "@material/menu-surface": ^13.0.0
+    "@material/notched-outline": ^13.0.0
+    "@material/radio": ^13.0.0
+    "@material/ripple": ^13.0.0
+    "@material/rtl": ^13.0.0
+    "@material/segmented-button": ^13.0.0
+    "@material/select": ^13.0.0
+    "@material/shape": ^13.0.0
+    "@material/slider": ^13.0.0
+    "@material/snackbar": ^13.0.0
+    "@material/switch": ^13.0.0
+    "@material/tab": ^13.0.0
+    "@material/tab-bar": ^13.0.0
+    "@material/tab-indicator": ^13.0.0
+    "@material/tab-scroller": ^13.0.0
+    "@material/textfield": ^13.0.0
+    "@material/theme": ^13.0.0
+    "@material/tokens": ^13.0.0
+    "@material/tooltip": ^13.0.0
+    "@material/top-app-bar": ^13.0.0
+    "@material/touch-target": ^13.0.0
+    "@material/typography": ^13.0.0
     "@rails/activestorage": ^6.0.0
     "@sampsonjs/helpers": "workspace:*"
+    "@sampsonjs/stimulated": "workspace:*"
+    babel-plugin-dynamic-import-node: ^2.3.3
     babel-plugin-macros: ^3.0.1
-    babel-plugin-syntax-dynamic-import: ^6.18.0
     core-js: ^3.4.0
     date-fns: ^2.16.1
     date-fns-tz: ^1.0.12
@@ -6883,6 +6985,15 @@ __metadata:
   version: 2.0.0
   resolution: "strip-final-newline@npm:2.0.0"
   checksum: 69412b5e25731e1938184b5d489c32e340605bb611d6140344abc3421b7f3c6f9984b21dff296dfcf056681b82caa3bb4cc996a965ce37bcfad663e92eae9c64
+  languageName: node
+  linkType: hard
+
+"supports-color@npm:*":
+  version: 9.0.2
+  resolution: "supports-color@npm:9.0.2"
+  dependencies:
+    has-flag: ^5.0.0
+  checksum: 690c21f61945a1ebab61fbc9dc861672b1d9678359ce75312b8b7ecb873f37f2ed2df56daa4ef4265300bea2e51f8285831ffb0a190ac46aaeed1d5b44fd51fe
   languageName: node
   linkType: hard
 

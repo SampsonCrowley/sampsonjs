@@ -17,3 +17,21 @@ The ultimate scope for Frontend packages
 All pieces use ES6 modules and only ESmodules. build using the framework of *your* choice
 
 Every piece is written to be lightweight and individually require-able. Only include what you want to include.
+
+
+## Development
+
+To tag a new Version:
+
+`yarn workspace @sampsonjs/packagename version <strategy>`
+
+where strategy is:
+
+- major
+- minor
+- patch
+- prerelease
+
+To release a new version:
+
+`yarn workspace @sampsonjs/packagename npm publish`

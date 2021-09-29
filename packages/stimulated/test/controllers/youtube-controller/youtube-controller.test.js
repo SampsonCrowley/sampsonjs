@@ -1,6 +1,7 @@
 // controllers/youtube-controller/youtube-controller.js
+import { YoutubeController, youtubeLoaded } from "@sampsonjs/stimulated/controllers/youtube-controller"
+
 import { MDCTopAppBar } from '@material/top-app-bar';
-import { YoutubeController, youtubeLoaded } from "controllers/youtube-controller"
 import { sleepAsync } from "@sampsonjs/helpers/sleep-async"
 import { visibility } from "@sampsonjs/helpers/visibility-state"
 import {

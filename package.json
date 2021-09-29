@@ -11,6 +11,9 @@
     "packages/*/lib"
   ],
   "scripts": {
+    "publish:helpers": "yarn workspace @sampsonjs/helpers npm publish",
+    "publish:material": "yarn workspace @sampsonjs/material npm publish",
+    "publish:stimulated": "yarn workspace @sampsonjs/stimulated npm publish",
     "test": "yarn workspaces foreach --exclude */src run test",
     "test:stimulated": "yarn workspace stimulated test"
   }

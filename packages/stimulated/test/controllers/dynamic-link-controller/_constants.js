@@ -1,4 +1,5 @@
-import { DynamicLinkController } from "controllers/dynamic-link-controller"
+import { DynamicLinkController } from "@sampsonjs/stimulated/controllers/dynamic-link-controller"
+
 import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 import { TemplateController } from "../../test-helpers/generators/template-controller"
 

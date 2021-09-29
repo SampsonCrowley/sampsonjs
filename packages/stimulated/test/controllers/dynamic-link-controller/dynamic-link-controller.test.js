@@ -1,5 +1,5 @@
 // controllers/dynamic-link-controller/dynamic-link-controller.js
-import { DynamicLinkController } from "controllers/dynamic-link-controller"
+import { DynamicLinkController } from "@sampsonjs/stimulated/controllers/dynamic-link-controller"
 import { allStandardTags } from "../../test-helpers/all-standard-tags"
 import {
           createTemplateController,

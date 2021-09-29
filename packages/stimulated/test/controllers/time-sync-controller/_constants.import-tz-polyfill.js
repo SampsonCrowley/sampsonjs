@@ -1,4 +1,4 @@
-export { importTZPolyfill } from "controllers/time-sync-controller/import-tz-polyfill"
+export { importTZPolyfill } from "@sampsonjs/stimulated/controllers/time-sync-controller/import-tz-polyfill"
 
 
 let mockStatus

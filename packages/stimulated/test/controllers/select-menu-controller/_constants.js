@@ -1,4 +1,5 @@
-import { SelectMenuController } from "controllers/select-menu-controller"
+import { SelectMenuController } from "@sampsonjs/stimulated/controllers/select-menu-controller"
+
 import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 import { TemplateController } from "../../test-helpers/generators/template-controller"
 

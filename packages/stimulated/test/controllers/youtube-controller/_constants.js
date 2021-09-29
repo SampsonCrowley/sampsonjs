@@ -1,10 +1,12 @@
-import { YoutubeController } from "controllers/youtube-controller"
+import { YoutubeController } from "@sampsonjs/stimulated/controllers/youtube-controller"
+
+export { importScript } from "@sampsonjs/helpers/import-script"
+export { uniqueId } from "@sampsonjs/helpers/unique-id"
+
 import { controllerRegistration } from "../../test-helpers/generators/controller-registration"
 import { TemplateController } from "../../test-helpers/generators/template-controller"
 import { Player } from "../../test-helpers/mocks/yt/player"
 export { mockScope } from "../../test-helpers/generators/mock-scope"
-export { importScript } from "@sampsonjs/helpers/import-script"
-export { uniqueId } from "@sampsonjs/helpers/unique-id"
 
 YoutubeController.bless()
 
