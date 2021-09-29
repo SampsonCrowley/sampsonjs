@@ -21,6 +21,7 @@
 @use "sass:list";
 @use "sass:map";
 @use "sass:math";
+@use "sass:string";
 @use "../../variables" as material-theme;
 
 // returns the lower grid boundary or null if the smallest grid is selected
@@ -90,9 +91,9 @@
     }
 
     display: block;
-    width: 'calc(#{$percent} - #{$gutter})';
+    width: string.unquote('calc(#{$percent} - #{$gutter})');
     // stylelint-disable-next-line declaration-block-no-duplicate-properties
-    width: 'calc(#{$percent} - var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}))';
+    width: string.unquote('calc(#{$percent} - var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}))');
 
     @supports (display: grid) {
       width: auto;
@@ -128,7 +129,7 @@
   align-items: stretch;
   margin: math.div(-$gutter, 2);
   // stylelint-disable-next-line declaration-block-no-duplicate-properties
-  margin: 'calc(var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / (-2))';
+  margin: string.unquote('calc(var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / (-2))');
 
   @supports (display: grid) {
     display: grid;
@@ -150,7 +151,7 @@
   box-sizing: border-box;
   margin: math.div($gutter, 2);
   // stylelint-disable-next-line declaration-block-no-duplicate-properties
-  margin: 'calc(var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / 2)';
+  margin: string.unquote('calc(var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) / 2)');
 
   @supports (display: grid) {
     margin: 0;
@@ -199,9 +200,11 @@
   width: $column-width * $columnCount + $gutter * $gutter-number + $margin * $margin-number;
   // stylelint-disable-next-line declaration-block-no-duplicate-properties
   width:
-    'calc(
-      var(--mdc-layout-grid-column-width-#{$size}, #{$column-width}) * #{$columnCount} + 
-      var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) * #{$gutter-number} + 
-      var(--mdc-layout-grid-margin-#{$size}, #{$margin}) * #{$margin-number}
-    )';
+    string.unquote(
+      'calc( \
+        var(--mdc-layout-grid-column-width-#{$size}, #{$column-width}) * #{$columnCount} + \
+        var(--mdc-layout-grid-gutter-#{$size}, #{$gutter}) * #{$gutter-number} + \
+        var(--mdc-layout-grid-margin-#{$size}, #{$margin}) * #{$margin-number} \
+      )'
+    );
 }
